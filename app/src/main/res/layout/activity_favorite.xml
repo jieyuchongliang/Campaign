@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_favorite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fujisoft.campaign.FavoriteActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/button_edu"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_edu"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_travel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_travel"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_finance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_finance"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_car"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_car"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/button_house"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_house"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_family"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_family"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_clothes"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_c"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_food"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_f"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/button_life"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_l"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_hairdressing"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_hairdressing"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_internet"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_internet"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_electron"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_electron"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/button_sport"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_sport"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_health"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_health"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_child"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_child"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_pet"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/favorite_uncheck"
+                        android:text="@string/favorite_pet"
+                        android:textColor="@color/common_color"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/favorite_shape"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/favorite_friend"
+                        android:textColor="@color/common_color"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edit_num"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/common_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/favorite_num"
+                        android:textColor="@color/common_color"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/common_color" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="25dp"
+                android:background="@drawable/btn_selector"
+                android:text="@string/sign_in"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shopping_car"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShoppingCartActivity">
+
+    <ListView
+        android:id="@+id/shopping_cart_goods_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/layout_balance"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="600dp"
+            android:layout_height="1dp"
+
+            android:layout_alignParentTop="true"
+            android:background="@color/gray"></View>
+
+        <TextView
+            android:id="@+id/shopping_car_subtotal_sum_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center|left"
+            android:text="@string/shopping_cart_sum"
+            android:textColor="@color/flower_market_text_gray"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/shopping_car_subtotal_sum_text"
+            android:gravity="center|left"
+            android:text="@string/shopping_cart_flower"
+            android:textColor="@color/flower_market_tab_selected"
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            />
+
+        <Button
+            android:id="@+id/btn_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/flower_market_tab_selected"
+            android:gravity="center"
+            android:onClick="balanceClick"
+            android:text="@string/shopping_cart_balance"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/none_icon" />
+
+        <TextView
+            android:id="@+id/txt_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img1"
+            android:layout_centerHorizontal="true"
+            android:text="亲,购物车空空的耶～赶紧动起来"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_go"
+            android:layout_centerHorizontal="true"
+            android:text="去逛逛"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <android.support.v4.widget.SwipeRefreshLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+        android:id="@+id/list"
+        android:name="com.fujisoft.campaign.fragment.TaskFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/task_divider"
+        app:layoutManager="LinearLayoutManager"
+        android:background="@color/white"
+        tools:context="com.fujisoft.campaign.fragment.TaskFragment"
+        tools:listitem="@layout/fragment_task" />
+</android.support.v4.widget.SwipeRefreshLayout>
+    <!--<LinearLayout-->
+
+        <!--android:id="@+id/none_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/order_list_none_image"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@mipmap/none_icon" />-->
+    <!--</LinearLayout>-->
+
+
+
+<!--</RelativeLayout>-->

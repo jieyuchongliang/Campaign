@@ -1,0 +1,244 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <!-- 首页 -->
+
+    <LinearLayout
+        android:id="@+id/tool_bar_horn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/white"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/horn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/horn"
+            />
+        <ViewFlipper
+            android:id="@+id/id_main_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoStart="true"
+            android:inAnimation="@anim/anim_marquee_in"
+            android:outAnimation="@anim/anim_marquee_out"
+        />
+
+    </LinearLayout>
+
+    <!-- 首页 -->
+    <LinearLayout
+        android:id="@+id/tool_bar_index_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/white"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/toolbar_padding_size"
+        android:visibility="gone">
+
+        <com.fujisoft.campaign.view.SearchEditText
+            android:id="@+id/index_searchView"
+            style="@style/editTextStylebai"
+            android:layout_marginLeft="10dp"
+            android:hint="@string/hint_task_find"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+
+    <!-- 首页(检索) -->
+    <LinearLayout
+        android:id="@+id/tool_bar_index_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_color"
+        android:orientation="horizontal"
+        android:padding="@dimen/toolbar_padding_size"
+        android:visibility="gone">
+        <!-- 最左侧的返回按扭 -->
+        <ImageButton
+            android:id="@+id/index_search_tool_bar_back_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back" />
+        <!--android:layout_marginLeft="@dimen/toolbar_padding_size"-->
+
+
+        <com.fujisoft.campaign.view.SearchEditText
+            android:id="@+id/index_search_searchView"
+            style="@style/editTextStylebai"
+            android:hint="@string/hint_task_find"
+
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tool_bar_index_search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:text="@string/search_button"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <!-- 任务大厅页面 -->
+    <LinearLayout
+        android:id="@+id/tool_bar_task_hall_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/tool_bar_task_hall_list_button"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/money" />
+        <!--android:layout_marginLeft="@dimen/toolbar_padding_size"-->
+        <ImageButton
+            android:id="@+id/tool_bar_task_button"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/back"
+            android:visibility="gone"
+            />
+
+        <EditText
+            android:id="@+id/tool_bar_task_hall_search_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            android:background="@drawable/shape"
+            android:inputType="text"
+            android:hint="@string/input_key_word"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:textColor="@color/gray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tool_bar_task_hall_search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/search_button"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <!-- 其他页面：返回键、居中的TextView、右下角的TextView、购物车 -->
+    <RelativeLayout
+        android:id="@+id/tool_bar_back_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 最左侧的返回按扭 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+
+            android:gravity="center">
+
+            <ImageButton
+            android:id="@+id/tool_bar_back_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back"
+            android:visibility="gone" />
+
+            <!--android:layout_marginLeft="@dimen/toolbar_padding_size"-->
+        </LinearLayout>
+
+
+        <!-- 中间的标题（如：我的、商品详情等） -->
+        <TextView
+            android:id="@+id/tool_bar_center_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_center_text_size"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+
+            android:gravity="center">
+
+            <!-- 右下角的小按扭（如：个人注册、注册等） -->
+            <TextView
+                android:id="@+id/tool_bar_right_bottom_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/toolbar_padding_size"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbar_right_bottom_button_size"
+                android:visibility="invisible" />
+
+            <!-- 右下角的小图标（如：购物车等） -->
+            <RelativeLayout
+                android:id="@+id/tool_bar_shopping_car_button"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/tool_bar_shopping_car"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/shopping_car"
+                    android:onClick="onButtonClick" />
+
+                <TextView
+                    android:id="@+id/tool_bar_shopping_car_num"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/flower_market_buy_car_infosign_bg"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="8sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

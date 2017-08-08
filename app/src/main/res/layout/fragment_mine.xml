@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/activity_mine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <TextView
+        android:id="@+id/unlogin_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/mine_message"
+        android:textColor="@color/gray"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/mine_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="1.32">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="0.2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/mine_my_margin"
+                android:paddingStart="@dimen/mine_my_margin">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mine_change_photo_user_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="onButtonClick"
+                    android:scaleType="centerInside"
+                    fresco:placeholderImage="@drawable/default_user_img"
+                    fresco:roundedCornerRadius="25dp"
+                    fresco:roundingBorderWidth="1dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/user_alias_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|left"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/mine_card_margin"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/mine_enter_acer_linearlayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/mine_card_margin">
+
+                        <ImageView
+                            android:id="@+id/mine_enter_acer_icon_img"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginRight="@dimen/mine_my_flower_margin"
+                            android:onClick="onButtonClick"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/enter_acer" />
+
+                        <TextView
+                            android:id="@+id/mine_enter_acer_num_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="0"
+                            android:textColor="@color/mine_gold_color"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/user_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="1.0"
+                        android:gravity="left|center_vertical"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/mine_card_margin"
+                        android:textColor="@color/flower_market_text_gray"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mine_run_to_flower_market_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.2"
+                    android:onClick="onButtonClick"
+                    android:orientation="vertical"
+                    android:weightSum="3.0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <ImageView
+                            android:id="@+id/mine_flower_icon_img"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="4dp"
+                            android:onClick="onButtonClick"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/little_flower_icon" />
+
+                        <TextView
+                            android:id="@+id/mine_run_to_flower_num_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:maxLines="1"
+                            android:onClick="onButtonClick"
+                            android:text="0"
+                            android:textColor="@color/mine_flower_color"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="3dp"
+
+                            />
+
+<!--                        <TextView
+                            android:id="@+id/mine_run_to_flower_market_btn"
+                            android:layout_width="8dp"
+                            android:layout_height="13dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/go"
+                            android:onClick="onButtonClick"
+                            android:text=" " />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mine_strawberry_icon_img"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="3dp"
+                            android:onClick="onButtonClick"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/strawberry" />
+
+                        <TextView
+                            android:id="@+id/mine_run_to_strawberry_num_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:layout_marginRight="10dp"
+                            android:maxLines="1"
+                            android:onClick="onButtonClick"
+                            android:text="0"
+                            android:textColor="@color/mine_flower_color"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="3dp"
+                            />
+
+                        <ImageView
+                            android:id="@+id/mine_run_to_gold_icon_img"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="3dp"
+                            android:onClick="onButtonClick"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/little_gold_icon" />
+
+                        <TextView
+                            android:id="@+id/mine_run_to_gold_num_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:maxLines="1"
+                            android:onClick="onButtonClick"
+                            android:text="0"
+                            android:textColor="@color/mine_gold_color"
+                            android:layout_marginLeft="3dp"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/mine_run_to_gold_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@+id/mine_run_to_flower_market_btn"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:layout_gravity="right"
+                        android:gravity="right|center_vertical"
+                        android:maxLines="1"
+                        android:onClick="onButtonClick"
+                        android:text="@string/mine_run_to_flower_market_comment_text"
+                        android:textColor="@color/flower_market_text_gray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/mine_my_ranking_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.28"
+            android:onClick="onButtonClick">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+
+                android:layout_marginTop="8dp"
+
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/mine_my_margin"
+                android:paddingStart="@dimen/mine_my_margin"
+                android:weightSum="7.6">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.8"
+                    android:orientation="vertical"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/mine_flower_order_text"
+                        android:textColor="@color/flower_market_text_gray"
+                        android:textSize="@dimen/mine_my_ranking_text_size"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0">
+
+                        <TextView
+                            android:id="@+id/mine_user_alis_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_toRightOf="@+id/mine_user_icon"
+                            android:gravity="left|center_vertical"
+                            android:maxLines="1"
+                            android:paddingLeft="5dp"
+                            android:textSize="@dimen/mine_my_ranking_text_size_small" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mine_user_icon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerInside"
+                            fresco:placeholderImage="@drawable/default_user_img"
+                            fresco:roundedCornerRadius="20dp"
+                            fresco:roundingBorderWidth="1dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/mine_user_oder_sort_num"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.5"
+                    android:background="@mipmap/mine_my_order_icon"
+                    android:gravity="center_horizontal|top"
+                    android:paddingTop="6dp"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="@dimen/mine_my_ranking_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.3"
+                    android:gravity="left|center_vertical"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/mine_card_margin"
+                    android:layout_weight="3.0"
+                    android:orientation="vertical"
+                    android:weightSum="3.4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/mine_order_friend_1_text"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+
+                            android:layout_gravity="center_vertical"
+
+                            android:layout_weight="1"
+                            android:background="@mipmap/mine_my_order_icon"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="7dp"
+
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="7dp"
+                            android:textStyle="bold" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mine_order_friend_1_icon"
+                            android:layout_width="@dimen/mine_my_ranking_img"
+                            android:layout_height="@dimen/mine_my_ranking_img"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/mine_my_ranking_margin"
+                            android:layout_marginRight="@dimen/mine_my_ranking_margin"
+                            android:layout_toRightOf="@+id/mine_order_friend_1_text"
+                            android:scaleType="fitStart"
+                            fresco:placeholderImage="@drawable/default_user_img"
+                            fresco:roundedCornerRadius="@dimen/mine_my_ranking_img_half"
+                            fresco:roundingBorderWidth="1dp" />
+
+                        <TextView
+                            android:id="@+id/mine_order_friend_1_name"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toRightOf="@+id/mine_order_friend_1_icon"
+                            android:layout_weight="4"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:maxLines="1"
+                            android:textSize="@dimen/mine_my_ranking_text_size_small" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:gravity="left|center_vertical"
+                        android:text="" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/mine_order_friend_2_text"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@mipmap/mine_my_order_icon_2"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="7dp"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="7dp"
+                            android:textStyle="bold" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mine_order_friend_2_icon"
+                            android:layout_width="@dimen/mine_my_ranking_img"
+                            android:layout_height="@dimen/mine_my_ranking_img"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/mine_my_ranking_margin"
+                            android:layout_marginRight="@dimen/mine_my_ranking_margin"
+
+                            android:layout_toRightOf="@+id/mine_order_friend_2_text"
+                            android:scaleType="fitStart"
+                            fresco:placeholderImage="@drawable/default_user_img"
+                            fresco:roundedCornerRadius="@dimen/mine_my_ranking_img_half"
+                            fresco:roundingBorderWidth="1dp" />
+
+                        <TextView
+                            android:id="@+id/mine_order_friend_2_name"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toRightOf="@+id/mine_order_friend_2_icon"
+                            android:layout_weight="4"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:maxLines="1"
+                            android:textSize="@dimen/mine_my_ranking_text_size_small" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:gravity="left|center_vertical"
+                        android:text="" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/mine_order_friend_3_text"
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"
+
+                            android:layout_gravity="center_vertical"
+
+                            android:layout_weight="1"
+                            android:background="@mipmap/mine_my_order_icon_3"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="7dp"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="7dp"
+                            android:textStyle="bold" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mine_order_friend_3_icon"
+                            android:layout_width="@dimen/mine_my_ranking_img"
+                            android:layout_height="@dimen/mine_my_ranking_img"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/mine_my_ranking_margin"
+                            android:layout_marginRight="@dimen/mine_my_ranking_margin"
+
+                            android:layout_toRightOf="@+id/mine_order_friend_3_text"
+                            android:scaleType="fitStart"
+                            fresco:placeholderImage="@drawable/default_user_img"
+                            fresco:roundedCornerRadius="@dimen/mine_my_ranking_img_half"
+                            fresco:roundingBorderWidth="1dp" />
+
+                        <TextView
+                            android:id="@+id/mine_order_friend_3_name"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toRightOf="@+id/mine_order_friend_3_icon"
+                            android:layout_weight="4"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:maxLines="1"
+                            android:textSize="@dimen/mine_my_ranking_text_size_small" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/mine_card_margin"
+            android:layout_marginTop="@dimen/mine_card_margin"
+            android:layout_weight="0.14">
+
+            <LinearLayout
+
+                android:id="@+id/mine_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/mine_info_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="3dp"
+
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/boder"
+                    android:gravity="center"
+                    android:onClick="onButtonClick"
+                    android:text="@string/mine_info_title_text"
+                    android:textColor="@color/flower_market_text_gray"
+                    android:textSize="@dimen/mine_my_ranking_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mine_shared_task_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="3dp"
+
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/boder"
+                    android:gravity="center"
+                    android:onClick="onButtonClick"
+                    android:text="@string/mine_shared_task_text"
+                    android:textColor="@color/flower_market_text_gray"
+                    android:textSize="@dimen/mine_my_ranking_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mine_publish_task_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="3dp"
+
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1.0"
+
+                    android:background="@drawable/boder"
+                    android:gravity="center"
+                    android:onClick="onButtonClick"
+                    android:text="@string/mine_publish_task_text"
+                    android:textColor="@color/flower_market_text_gray"
+                    android:textSize="@dimen/mine_my_ranking_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mine_staff_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="5dp"
+
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1.0"
+
+
+                    android:background="@drawable/boder"
+                    android:gravity="center"
+                    android:onClick="onButtonClick"
+                    android:text="@string/mine_staff_text"
+                    android:textColor="@color/flower_market_text_gray"
+                    android:textSize="@dimen/mine_my_ranking_text_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2.0">
+
+                <LinearLayout
+                    android:id="@+id/mine_my_orders_list_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/mine_card_margin"
+                    android:layout_weight="1.0"
+                    android:onClick="onButtonClick"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:background="@mipmap/mine_my_orders_list_bg">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/mine_my_margin"
+                            android:layout_marginTop="5dp"
+                            android:gravity="top|left"
+                            android:text="@string/mine_my_order_list_text"
+                            android:textSize="@dimen/mine_my_ranking_text_size_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:id="@+id/mine_my_order_list_linearlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/mine_card_margin"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/boder"
+                        android:padding="1dp"
+                        android:visibility="invisible"
+                        android:weightSum="2.5">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mine_my_order_list_img"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:scaleType="fitXY" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/mine_card_margin"
+                            android:layout_weight="1.5">
+
+                            <TextView
+                                android:id="@+id/mine_order_list_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/mine_card_margin"
+                                android:layout_marginTop="@dimen/mine_card_margin"
+                                android:ellipsize="end"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:id="@+id/mine_order_list_score_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/mine_order_list_title"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical|right"
+                                android:maxLines="1"
+                                android:textColor="@color/common_color" />
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:layout_below="@+id/mine_order_list_title"
+                                android:layout_marginRight="@dimen/mine_card_margin"
+                                android:layout_marginTop="3dp"
+                                android:layout_toLeftOf="@+id/mine_order_list_score_num"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/little_flower_icon" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mine_my_message_list_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/mine_card_margin"
+                    android:layout_weight="1.0"
+                    android:onClick="onButtonClick"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:background="@mipmap/mine_my_message_list_bg">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/mine_my_margin"
+                            android:layout_marginTop="5dp"
+                            android:gravity="top|right"
+                            android:text="@string/mine_my_message_list_text"
+                            android:textSize="@dimen/mine_my_ranking_text_size_small" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        android:id="@+id/mine_my_message_list_linearlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/mine_card_margin"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/boder"
+                        android:padding="1dp"
+                        android:visibility="invisible"
+                        android:weightSum="2.5">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mine_my_message_list_img"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:scaleType="fitXY" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/mine_card_margin"
+                            android:layout_weight="1.5">
+
+                            <TextView
+                                android:id="@+id/mine_message_list_task_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/mine_card_margin"
+                                android:layout_marginTop="@dimen/mine_card_margin"
+                                android:ellipsize="end"
+                                android:maxLines="1" />
+
+                            <ImageView
+                                android:id="@+id/mine_message_list_task"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/mine_message_list_task_title"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/start_task_arrow_required" />
+
+                            <TextView
+                                android:id="@+id/mine_message_list_task_state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/mine_message_list_task_title"
+                                android:layout_toLeftOf="@+id/mine_message_list_task"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/common_color" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <!--
+
+                <LinearLayout
+                    android:id="@+id/mine_my_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/mine_card_margin"
+                    android:layout_weight="0.15"
+                    android:weightSum="2.0">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:onClick="onButtonClick"
+                        android:orientation="horizontal"
+                        android:weightSum="2.0">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4" />
+
+                        <ImageView
+
+                            android:id="@+id/mine_my_finances_button_img"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginLeft="@dimen/mine_card_margin"
+                            android:layout_weight="0.6"
+                            android:scaleType="centerInside"
+
+                            android:onClick="onButtonClick"
+                            android:src="@mipmap/mine_my_finances_bg" />
+
+                        <TextView
+                            android:id="@+id/mine_my_finances_button"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/mine_card_margin"
+                            android:layout_weight="1.4"
+                            android:gravity="center_vertical|left"
+                            android:maxLines="1"
+                            android:onClick="onButtonClick"
+                            android:text="@string/mine_my_finances_text"
+                            android:textColor="@color/common_color"
+                            android:textSize="@dimen/mine_my_ranking_text_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:onClick="onButtonClick"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4" />
+
+                        <ImageView
+
+                            android:id="@+id/mine_my_tasks_sent_button_img"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginLeft="@dimen/mine_card_margin"
+                            android:layout_weight="0.6"
+                            android:scaleType="centerInside"
+
+                            android:onClick="onButtonClick"
+                            android:src="@mipmap/mine_my_published_tasks_bg" />
+
+                        <TextView
+                            android:id="@+id/mine_my_tasks_sent_button"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:gravity="center_vertical|left"
+                            android:maxLines="1"
+                            android:onClick="onButtonClick"
+                            android:paddingRight="@dimen/mine_card_margin"
+                            android:text="@string/mine_my_published_task_text"
+                            android:textColor="@color/common_color"
+                            android:textSize="@dimen/mine_my_ranking_text_size"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+        -->
+        <LinearLayout
+            android:id="@+id/mine_my_footer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:weightSum="2.03">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginBottom="@dimen/mine_card_margin"
+                android:layout_marginTop="@dimen/mine_card_margin"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="onButtonClick"
+                    android:orientation="horizontal"
+                    android:weightSum="2.0">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4" />
+
+                    <ImageView
+
+                        android:id="@+id/mine_my_finances_button_img"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginLeft="@dimen/mine_card_margin"
+                        android:layout_weight="0.6"
+                        android:onClick="onButtonClick"
+
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/mine_my_finances_bg" />
+
+                    <TextView
+                        android:id="@+id/mine_my_finances_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/mine_card_margin"
+                        android:layout_weight="1.4"
+                        android:gravity="center_vertical|left"
+                        android:maxLines="1"
+                        android:onClick="onButtonClick"
+                        android:text="@string/mine_my_finances_text"
+                        android:textColor="@color/common_color"
+                        android:textSize="@dimen/mine_my_ranking_text_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/mine_card_margin"
+                android:layout_marginTop="@dimen/mine_card_margin"
+                android:layout_weight="1">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="onButtonClick"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4" />
+
+                    <ImageView
+
+                        android:id="@+id/mine_my_tasks_sent_button_img"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginLeft="@dimen/mine_card_margin"
+                        android:layout_weight="0.6"
+                        android:onClick="onButtonClick"
+
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/mine_my_published_tasks_bg" />
+
+                    <TextView
+                        android:id="@+id/mine_my_tasks_sent_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical|left"
+                        android:maxLines="1"
+                        android:onClick="onButtonClick"
+                        android:paddingRight="@dimen/mine_card_margin"
+                        android:text="@string/mine_my_published_task_text"
+                        android:textColor="@color/common_color"
+                        android:textSize="@dimen/mine_my_ranking_text_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

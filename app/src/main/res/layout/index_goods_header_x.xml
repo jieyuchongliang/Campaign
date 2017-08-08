@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/task_border">
+    <!--为了解决 切换到首页时 商品飘上去的问题，追加一个空白RecyclerView-->
+    <TextView
+        android:id="@+id/flower_market_goods_title_x"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginBottom="16dp"
+
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/gray"
+        android:text="@string/index_goods_header"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+
+</LinearLayout>
+

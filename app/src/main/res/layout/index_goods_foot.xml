@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_index_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:background="@drawable/task_border"
+    tools:context="com.fujisoft.campaign.IndexSearchActivity">
+<!--
+    <TextView
+        android:id="@+id/flower_market_goods_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/index_goods_header"/>
+-->
+
+    <TextView
+        android:id="@+id/flower_market_goods_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginBottom="16dp"
+
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/gray"
+        android:text="@string/index_goods_header"
+        />
+    <!--为了解决 切换到首页时 商品飘上去的问题，追加一个空白RecyclerView-->
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/flower_market_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            />
+
+    </LinearLayout>

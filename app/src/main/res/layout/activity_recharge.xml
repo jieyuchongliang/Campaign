@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:padding="@dimen/recharge_padding"
+            android:weightSum="12">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/recharge_input_amount"
+                    android:textColor="@color/common_color" />
+
+                <EditText
+                    android:id="@+id/recharge_input_amount_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:cursorVisible="false"
+                    android:digits="1234567890."
+                    android:inputType="number"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/common_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/recharge_padding"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="@string/recharge_select_amount"
+                    android:textColor="@color/common_color" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recylerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/recharge_padding"
+                android:background="@color/common_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/recharge_padding"
+                android:layout_weight="1.5"
+                android:gravity="center|left">
+
+                <TextView
+                    android:id="@+id/recharge_sent_gold_amount_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="@string/recharge_sent_gold_amount"
+                    android:textColor="@color/common_color" />
+
+                <TextView
+                    android:id="@+id/recharge_sent_gold_amount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/recharge_padding"
+                    android:layout_toRightOf="@+id/recharge_sent_gold_amount_title"
+                    android:text="0"
+                    android:textColor="@color/common_color" />
+
+                <TextView
+                    android:id="@+id/recharge_sent_gold_amount_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recharge_sent_gold_amount_tv"
+                    android:paddingLeft="5dp"
+                    android:text="@string/recharge_sent_gold_note"
+                    android:textColor="@color/tab_unselected" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/recharge_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/recharge_padding"
+                android:layout_weight="1.5"
+                android:background="@drawable/btn_nomal_shape"
+                android:text="@string/payment"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

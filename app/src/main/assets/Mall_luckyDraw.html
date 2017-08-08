@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>鲜花抽奖</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!--标准mui.css-->
+        <!--<link href="./css/mui.min.css" rel="stylesheet" />
+        <script src="./js/mui.min.js"></script>-->
+        <!--<script src="./js/jquery-1.9.1.min.js"></script>-->
+        <link href="file:///android_asset/css/mui.min.css" rel="stylesheet" type="text/css" />
+        <script src="file:///android_asset/js/mui.min.js"></script>
+        <script src="file:///android_asset/js/jquery-1.9.1.min.js"></script>
+        <script src="file:///android_asset/js/layer/layer.js"></script>
+        <style type="text/css">
+            body,
+            html {
+                /*height: 100%;*/
+            }
+            
+            body>.mui-content {
+                /*height: 100%;*/
+                /*background-image: url(__RES__/mobile/images/luckyDraw.jpg);*/
+                /*background-image: url(file:///android_res/drawable/lucky_draw.jpg);*/
+                background-position: top center;
+                background-size: 100% auto;
+                background-repeat:no-repeat;
+                /*background-size: cover;*/
+            }
+            
+            .self-content>div {
+                box-sizing: border-box;
+                /*padding: 4px;*/
+                border: 2px solid transparent;
+            }
+            
+            .self-content>div>div {
+                height: 100%;
+                width: 100%;
+                /*margin: 4px;*/
+            }
+            
+            .self-content>div>div>img {
+                height: calc(100% - 24px);
+                width: 100%;
+            }
+            
+            .self-content>div>div>h5,
+            .self-content>div>div>h3 {
+                color: rgb(135, 101, 0);
+                margin-top: 0;
+                padding-top: 5px;
+            }
+            
+            .self-content>div>div>h3 {
+                line-height: 47px;
+            }
+            
+            .self-txt h5,
+            .self-txt h6,
+            .self-txt p {
+                color: white!important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="mui-content">
+            <div class="mui-row">
+                <div class="mui-col-xs-1">
+
+                </div>
+                <div class="mui-col-xs-10 self-content" style="height: 200px;margin-top:90%;box-sizing: border-box;display:none">
+                    <div id="good0" data-id="" style="height: 65%;width: 25%;float: left;">
+                        <div style="background-color:rgb(255, 246, 87);">
+                            <h5 class="mui-ellipsis mui-text-center" id="h0"></h5>
+                            <img src="" id="img0"/>
+                        </div>
+                    </div>
+                    <div id="good1" data-id="" style="height: 35%;width: 37.5%;float: left;">
+                        <div style="background-color:rgb(255, 246, 87);">
+                            <h5 class="mui-ellipsis mui-text-center" id="h1"></h5>
+                            <img src="" id="img1"/>
+                        </div>
+                    </div>
+                    <div id="good2" data-id="" style="height: 35%;width: 37.5%;float: left;">
+                        <div style="background-color:rgb(255, 193, 0);">
+                            <h5 class="mui-ellipsis mui-text-center" id="h2"></h5>
+                            <img src="" id="img2"/>
+                        </div>
+                    </div>
+                    <div class="btn" style="height: 30%;width: 50%;float: left;">
+                        <div id="luckyNow" style="background-color:rgb(255, 230, 16);">
+                            <h3 class="mui-ellipsis mui-text-center">立即抽奖</h3>
+                        </div>
+                    </div>
+                    <div id="good3" data-id="" style="height: 65%;width: 25%;float: right;">
+                        <div style="background-color:rgb(255, 218, 0);">
+                            <h5 class="mui-ellipsis mui-text-center" id="h3"></h5>
+                            <img src="" id="img3"/>
+                        </div>
+                    </div>
+                    <div id="good4" data-id="" style="height: 35%;width: 37.5%;clear:left;float: right;">
+                        <div style="background-color:rgb(255, 193, 0);">
+                            <h5 class="mui-ellipsis mui-text-center" id="h4"></h5>
+                            <img src="" id="img4"/>
+                        </div>
+                    </div>
+                    <div id="good5" data-id="" style="height: 35%;width: 37.5%;float: right;">
+                        <div style="background-color:rgb(255, 218, 0);">
+                            <h5 class="mui-ellipsis mui-text-center" id="h5"></h5>
+                            <img src="" id="img5"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="mui-col-xs-1">
+
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-1">
+                </div>
+                <div class="mui-col-xs-10 self-txt">
+
+                </div>
+                <div class="mui-col-xs-1">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" charset="utf-8">
+        var index = layer.load(1, {
+                shade: [1, '#fff']
+            });
+        window.onload=function(){
+            $(".self-content").show();
+            layer.close(index);
+        }
+
+            var lotteryId = '';
+            var userId = '';
+            var basePath = "http://52.80.12.35";
+            $(function(){
+            　　$.getJSON(basePath+"/App/Mall/luckyDraw?callback=?", {
+                        }, function(result) {
+                            if(result && result.success) {
+                                $(".self-txt").empty();
+								$(".self-txt").append(result.lottery[0]['loggteryRule']);
+								$(".mui-content").css("background-image","url("+basePath+result.lottery[0]['bgUrl']+")");
+								/*第一个商品*/
+								$("#good0").attr("data-id",result.lotteryGoods[0]['goodsId']);
+								$("#h0").append(result.lotteryGoods[0]['goodsName']);
+								$("#img0").attr("src",basePath+result.lotteryGoods[0]['goodsLogo']);
+								/*第二个商品*/
+								$("#good1").attr("data-id",result.lotteryGoods[1]['goodsId']);
+								$("#h1").append(result.lotteryGoods[1]['goodsName']);
+								$("#img1").attr("src",basePath+result.lotteryGoods[1]['goodsLogo']);
+								/*第三个商品*/
+								$("#good2").attr("data-id",result.lotteryGoods[2]['goodsId']);
+								$("#h2").append(result.lotteryGoods[2]['goodsName']);
+								$("#img2").attr("src",basePath+result.lotteryGoods[2]['goodsLogo']);
+								/*第四个商品*/
+								$("#good3").attr("data-id",result.lotteryGoods[3]['goodsId']);
+								$("#h3").append(result.lotteryGoods[3]['goodsName']);
+								$("#img3").attr("src",basePath+result.lotteryGoods[3]['goodsLogo']);
+								/*第五个商品*/
+								$("#good4").attr("data-id",result.lotteryGoods[4]['goodsId']);
+								$("#h4").append(result.lotteryGoods[4]['goodsName']);
+								$("#img4").attr("src",basePath+result.lotteryGoods[4]['goodsLogo']);
+								/*第六个商品-*/
+								$("#good5").attr("data-id",result.lotteryGoods[5]['goodsId']);
+								$("#h5").append(result.lotteryGoods[5]['goodsName']);
+								$("#img5").attr("src",basePath+result.lotteryGoods[5]['goodsLogo']);
+								lotteryId = result.lotteryId;
+								userId = getUrlParam('userId')
+                            }else{
+                                stopIdx='errStop';
+                                mui.alert(result['msg']);
+                            }
+                        });
+            });
+            mui.init({
+                swipeBack: true //启用右滑关闭功能
+            });
+            var $item = $('.self-content').children('div:not(.btn)');
+            var canBtn = true;
+            mui('.self-content').on('tap', '#luckyNow', function() {
+                if(canBtn) {
+                    canBtn = false;
+                    var i = 0;
+                    var maxIdx = $item.length - 1;
+                    var currEle = null;
+                    var stopIdx = null;
+                    var timer = setInterval(function() {
+                        if(currEle) {
+                            currEle.css('border', '2px solid transparent');
+                        }
+                        currEle = $($item[i]);
+                        currEle.css('border', '2px solid orangered');
+                        var id = currEle.attr("data-id");
+                        if(stopIdx == 'errStop'){
+                            clearInterval(timer);
+                        }
+                        if(stopIdx != null) {
+                            if(stopIdx == id) {
+                                clearInterval(timer);
+                                canBtn = true;
+                            }
+                        }
+                        i++;
+                        if(i > maxIdx) {
+                            i = 0;
+                        }
+                    }, 55);
+                    setTimeout(function() {
+                        /**
+                         *  TODO 开始5s-7s后ajax请求后台，由后台确定选中哪一个，ajax返回，设置在选中的地方停下
+                         */
+                        $.getJSON(basePath+"/App/Mall/luckyNum?callback=?", {
+                            'lotteryId':lotteryId,
+                            'userId':userId
+                        }, function(result) {
+                            if(result && result.success) {
+                                stopIdx = result.luckyIdx;
+                                mui.alert(result['luckyGoodsName'])
+                            }else{
+                                stopIdx='errStop';
+                                mui.alert(result['msg']);
+                            }
+                        });
+                    }, 3000);
+                }
+            });
+            function getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+                if (r != null) return unescape(r[2]); return null; //返回参数值
+            }
+        </script>
+    </body>
+
+</html>

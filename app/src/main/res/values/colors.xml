@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 程序主色调 -->
+    <color name="white">#FFFFFF</color>
+    <color name="common_color">#FF7D43</color>
+    <color name="gray">#ABABAB</color>
+    <color name="background">#F2F2F2</color>
+    <color name="background2">#f7f6f6</color>
+    <color name="table_background">#CBCBCB</color>
+    <color name="tab_main_color">#1E1D1D</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="divider">#FFD2D2D2</color>
+    <color name="color_normal">#b1b1b1</color>
+    <!--修改头像-->
+    <color name="index_unrequired_color">#4C84CE</color>
+    <!-- 充值结果 -->
+    <color name="recharge_result_title_color">#FD5632</color>
+    <color name="recharge_result_success_amount_color">#FC7A7C</color>
+    <color name="pass">#2A5580</color>
+    <!-- 订单列表 -->
+    <color name="order_list_scores_color">#D34786</color>
+    <!--主界面-->
+    <color name="tab_unselected">#9A9A9A</color>
+    <!--鲜花商城-->
+    <color name="flower_market_buy_car_num">#AA2B33</color>
+    <color name="flower_market_text_gray">#878787</color>
+    <color name="flower_market_tab_selected">#FB4553</color>
+    <color name="flower_market_buy_immediately_bg">#FF4F00</color>
+    <color name="flower_market_goods_bg">#DAD9DA</color>
+    <color name="flower_market_flower_balance">#E87300</color>
+    <!--任务详情-->
+    <color name="task_details_text_points">#466B99</color>
+    <color name="task_green">#48CB8A</color>
+    <!--地址管理-->
+    <color name="white_blue">#f8fafa</color>
+    <color name="address_top">#d9cfae</color>
+    <!--省市选择器-->
+    <color name="release_c3">#dedede</color>
+    <color name="release_c7">#383838</color>
+    <color name="release_c9">#cc3333</color>
+    <!-- 我的 -->
+    <color name="mine_gold_color">#FEE072</color>
+    <color name="mine_flower_color">#E5502C</color>
+    <!-- 充值 -->
+    <color name="recharge_amount_select_color">#2196F3</color>
+    <!--首页-->
+    <color name="button_green">#FF01D235</color>
+    <color name="index_required_color">#F6B1A1</color>
+    <!--发布任务-->
+    <color name="white_gray">#EFEFEF</color>
+    <!-- 员工列表 -->
+    <color name="list_item_gray">#7A8FAC</color>
+    <!--爱好-->
+    <color name="favorite_color">#FFFAEDE3</color>
+    <color name="color_downloaded">#00FF00</color>
+    <!--商品详情-->
+    <color name="goods_detail_exchange_flowers">#ffff0000</color>
+    <color name="goods_detail_add_car">#ff9100</color>
+    <!--支付-->
+    <color name="navpage">#FFE1E8EB</color>
+    <!--购物车-->
+    <color name="shopping_car_v">#33000000</color>
+</resources>

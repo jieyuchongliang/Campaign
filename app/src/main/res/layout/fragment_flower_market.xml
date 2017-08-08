@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_flower_market"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff8f2"
+                android:orientation="vertical">
+
+                <com.fujisoft.campaign.view.CarouselView
+                    android:id="@+id/flower_market_carousel_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"></com.fujisoft.campaign.view.CarouselView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/flower_market_user_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        fresco:placeholderImage="@drawable/default_user_img"
+                        fresco:roundedCornerRadius="20dp"
+                        fresco:roundingBorderWidth="1dp" />
+
+                    <TextView
+                        android:id="@+id/flower_market_user_alias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_toRightOf="@+id/flower_market_user_icon"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/flower_market_tourist"
+                        android:textColor="@color/flower_market_text_gray"
+                        android:textSize="@dimen/flower_market_commodity_price_size" />
+
+                    <TextView
+                        android:id="@+id/flower_market_flower_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|left"
+                        android:text="0"
+                        android:textColor="@color/flower_market_flower_balance"
+                        android:textSize="@dimen/flower_market_commodity_price_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/flower_market_flower_balance"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/flower_market_flower_balance"
+                        android:textColor="@color/flower_market_text_gray"
+                        android:textSize="@dimen/flower_market_commodity_price_size" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <LinearLayout
+            android:id="@+id/flower_market_goods_floating_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="@dimen/flower_market_goods_padding"
+            android:orientation="horizontal"
+            android:weightSum="10.0">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/flower_market_tab_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="8.0"
+                app:tabContentStart="0dp"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/flower_market_tab_selected"
+                app:tabIndicatorHeight="1dp"
+                app:tabMode="fixed"
+                app:tabPaddingEnd="2dp"
+                app:tabPaddingStart="2dp"
+                app:tabSelectedTextColor="@color/flower_market_tab_selected" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:visibility="invisible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:background="@color/flower_market_tab_selected" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/flower_market_commodity_class_spinner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.0"
+                android:background="@mipmap/flower_market_spinner_bg2"
+                android:dropDownVerticalOffset="40dp"
+                android:gravity="center_vertical|right"
+                android:paddingStart="2dp" />
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/flower_market_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/flower_market_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+
+        android:backgroundTint="@color/white"
+        android:onClick="onButtonClick"
+        android:src="@mipmap/little_flower_icon"
+        app:borderWidth="0dp"
+        app:elevation="1dp"
+        app:pressedTranslationZ="4dp"
+        app:rippleColor="@color/flower_market_text_gray" />
+</android.support.design.widget.CoordinatorLayout>

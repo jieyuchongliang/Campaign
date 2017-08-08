@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:layout_weight="3"
+        android:background="@drawable/background_view"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/company_register_company_name" />
+
+            <EditText
+                android:id="@+id/edt_register_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/hint_company_name"
+                android:inputType="text"
+                android:textSize="@dimen/common_title_size"
+                android:paddingLeft="3dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/company_register_account_img" />
+
+            <EditText
+                android:id="@+id/edt_company_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/common_title_size"
+                android:background="@null"
+                android:digits="@string/rule_name"
+                android:hint="@string/hint_company_user_name"
+
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/company_register_password" />
+
+            <EditText
+                android:id="@+id/edt_register_company_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/common_title_size"
+                android:background="@null"
+                android:hint="@string/hint_company_password"
+                android:inputType="textPassword"
+                android:paddingLeft="3dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <ImageView
+                android:id="@+id/btn_register_company_license"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/company_register_camera_iconfont" />
+
+            <EditText
+                android:id="@+id/text_register_company_license"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:focusable="false"
+                android:textSize="@dimen/common_title_size"
+                android:hint="@string/hint_company_license"
+                android:inputType="phone"
+                android:paddingLeft="3dp" />
+
+            <ImageView
+                android:id="@+id/img_register_company_license"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitStart"
+                android:enabled="false"
+                android:paddingLeft="3dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp">
+
+        <CheckBox
+            android:id="@+id/checkBox_agree_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/common_title_size"
+            android:checked="true"
+            android:text="@string/login_checkBox_agree" />
+
+        <TextView
+            android:id="@+id/agree_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/common_title_size"
+            android:text="@string/login_rule_company"
+            android:textColor="@color/common_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_register_company_settle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_nomal_shape"
+            android:text="@string/login_put"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

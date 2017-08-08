@@ -1,0 +1,385 @@
+<resources>
+    <string name="app_name">点灿</string>
+    <!--共通-->
+    <string name="phone">电话</string>
+    <string name="payment">支付</string>
+    <string name="sign_in">注册</string>
+    <string name="modify_check">确认修改</string>
+    <string name="delete">删除</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="string_shared_task_text">已分享</string>
+    <string name="string_not_share_task_text">一键分享</string>
+    <string name="view_reduce">-</string>
+    <string name="view_add">+</string>
+    <string name="quit">退出</string>
+    <string name="warning">警告</string>
+    <string name="input">请重新输入！</string>
+    <string name="data_receive">数据请求失败！</string>
+    <!--关于我们-->
+    <string name="about_us">关于我们</string>
+    <string name="about_us_path1">
+        我们始终相信，选择可以很简单：与你一样热爱美丽的小美们，能为特别的你推荐最合适的美妆产品。
+    </string>
+    <string name="about_us_path2">
+        我们始终相信，新人可以很简单：坚持三十天内无条件的退货，能让您的网购成为绝无风险的享受。
+    </string>
+    <string name="about_us_path3">
+        我们始终相信，沟通可以很简单：几百位客服的贴心完美服务，能让您下的每一个订单都踏实安心。
+    </string>
+    <string name="about_us_path4">
+        我们始终相信，省时可以很简单：百万元打造的物流配送系统，能让您心爱的美妆第一时间给您带来惊喜......
+    </string>
+    <string name="about_us_path5">
+        我们相信互联网平等而开放的力量，我们相信用户的信任是最大的依靠，我们相信一群充满梦想的人，可以凭借着爱与执着，让你的美丽更简单！
+    </string>
+    <string name="about_us_text">上海灿熠网络科技有限公司是移动互联网营销领域的黑马企业，致力于用科技及全新商业模式打造全新的商业生态系统，专注提供移动互联网营销服务及平台的全方位解决方案。\n\n主要从事网络信息、计算机、系统集成科技专业领域内的技术开发、技术转让、技术咨询、技术服务等。</string>
+    <string name="netWrong">网络连接异常</string>
+    <string name="test_read">测试</string>
+    <!-- 地址管理 -->
+    <string name="add_address">添加</string>
+    <string name="address_name">姓名</string>
+    <string name="address_province">省</string>
+    <string name="address_city">市</string>
+    <string name="address_area">区</string>
+    <string name="address_street">街道</string>
+    <string name="address_add">添加地址</string>
+    <string name="address_check">默认</string>
+    <!-- 申请发票 -->
+    <string name="invoice_company_name_title">发票单位名称</string>
+    <string name="invoice_receiver_name_title">收件人姓名</string>
+    <string name="invoice_receiver_address_title">地址</string>
+    <string name="invoice_receiver_detail_address">详细地址</string>
+    <string name="invoice_receive_button">申 请</string>
+    <string name="hint_province">省份</string>
+    <string name="hint_city">城市</string>
+    <string name="hint_area">区域</string>
+    <!-- 头像修改 -->
+    <string name="modify_person_image">头像修改</string>
+    <string name="modify_person_image_from_gallery">从相册中选择</string>
+    <string name="modify_person_image_from_camera">拍照</string>
+    <!-- 昵称修改 -->
+    <string name="modify_nickName_title">昵称修改</string>
+    <string name="modify_nickName_new_title">新昵称:</string>
+    <string name="modify_nickName_fail">昵称修改失败</string>
+    <!--登录-->
+    <string name="login_person">会员登录</string>
+    <string name="hint_login_tel">手机号码/用户名</string>
+    <string name="hint_login_pwd">6~32位密码</string>
+    <string name="no_data">无数据</string>
+    <string name="change_toast_exception">发生异常，修改失败，请与管理员联系!</string>
+    <string name="change_toast_success">修改成功</string>
+    <string name="login_dialog_input_empty">手机号和密码不能为空，请重新输入！</string>
+    <string name="login_dialog_error">手机号或密码输入错误，请重新输入！</string>
+    <string name="login_dialog_hint">提示</string>
+    <string name="login_toast_success">登录成功</string>
+    <string name="login_checkBox_agree">同意接受</string>
+    <string name="login_rule">《点灿平台用户协议》</string>
+    <string name="login_rule_company">《点灿平台企业用户协议》</string>
+    <string name="forget_password">忘记密码?</string>
+
+
+    <string name="login_put">提  交</string>
+    <!-- 注册 -->
+    <string name="company_registration">企业注册</string>
+    <string name="person_registration">个人注册</string>
+    <string name="member_registration">会员注册</string>
+    <string name="hint_tel">11位手机号码</string>
+    <string name="hint_tel_check">手机验证码</string>
+
+    <string name="login_toast_exception">发生异常，登录失败，请与管理员联系!</string>
+    <string name="register_person_dialog_input_empty">%1$s不能为空，请重新输入！</string>
+    <string name="hint_company_name">企业名称</string>
+    <string name="hint_company_user_name">由数字字母组成的6~32位用户名</string>
+    <string name="hint_company_password">6~32位密码</string>
+    <string name="hint_company_license">营业执照</string>
+    <string name="alipay">支付宝</string>
+    <string name="wechat">微信</string>
+    <string name="company_pay_account_title">账户打款</string>
+    <string name="company_pay_account_name_title"> 户 名：</string>
+    <string name="company_pay_account_name">上海灿熠网络科技有限公司</string>
+    <string name="company_pay_account_number_title"> 账 号：</string>
+    <string name="company_pay_account_number">03003049255</string>
+    <string name="company_pay_account_banks_name_title">开户行：</string>
+    <string name="company_pay_account_banks_name">上海银行市北工业园区支行</string>
+    <string name="company_pay_confirm_text">付款备注企业全称，付款成功后请及时致电\n021-62036760,以保证及时开通企业发布任务后台</string>
+
+
+    <string name="toast_login_rule">请同意接受《点灿平台用户协议》!</string>
+    <string name="toast_login_rule_company">请同意接受《点灿平台企业用户协议》!</string>
+    <!-- 企业注册成功页面 -->
+    <string name="login">登录</string>
+    <string name="company_register_title">企业注册</string>
+    <string name="register_company_success_text">恭喜，注册成功！</string>
+    <string name="register_company_success_pay_title">交付开户费及年费</string>
+    <string name="register_company_success_pay_amount">%s元</string>
+    <string name="register_company_success_skip_pay_title">跳过</string>
+    <!--兴趣爱好-->
+    <string name="favorite_hobby">兴趣爱好</string>
+    <string name="favorite_edu">教育</string>
+    <string name="favorite_travel">旅游</string>
+    <string name="favorite_finance">金融</string>
+    <string name="favorite_car">汽车</string>
+    <string name="favorite_house">房产</string>
+    <string name="favorite_family">家居</string>
+    <string name="favorite_hairdressing">美容</string>
+    <string name="favorite_internet">互联\n网</string>
+    <string name="favorite_c">服饰\n鞋帽</string>
+    <string name="favorite_f">餐饮\n美食</string>
+    <string name="favorite_l">生活\n服务</string>
+    <string name="favorite_electron">电子\n产品</string>
+    <string name="favorite_sport">体育\n运动</string>
+    <string name="favorite_health">医疗\n健康</string>
+    <string name="favorite_child">孕产\n育儿</string>
+    <string name="favorite_pet">宠物</string>
+    <string name="favorite_friend">微信好友：</string>
+    <string name="favorite_num">位</string>
+    <string name="register_toast_unchose_favorite">请至少选择一种兴趣爱好！</string>
+
+    <!-- 财务 -->
+    <string name="finance">财务</string>
+    <string name="finance_gold_count">元宝：</string>
+    <string name="finance_recharge">充值</string>
+    <string name="finance_recharge_record">充值记录</string>
+    <string name="finance_apply_invoice">申请发票</string>
+    <!-- 商品详情 -->
+    <string name="goods_detail_title">商品详情</string>
+    <string name="goods_detail_exchange_flowers_text">%d鲜花</string>
+    <string name="goods_detail_goods_size_title">尺寸</string>
+    <string name="goods_detail_goods_color">颜色</string>
+    <string name="goods_detail_car">加入购物车</string>
+    <string name="goods_detail_flower">鲜花兑换</string>
+    <string name="goods_detail_delivery_wait">待发货</string>
+    <string name="goods_detail_delivery_already">已发货</string>
+    <string name="goods_detail_finish">已完成</string>
+    <!-- 密码修改 -->
+    <string name="reset_password_title">密码修改</string>
+    <string name="reset_password_old_pwd">旧密码:</string>
+    <string name="reset_password_new_pwd">新密码:</string>
+    <string name="reset_password_confirm_pwd">确认密码:</string>
+    <string name="reset_password_fail">密码修改失败</string>
+    <!-- 退出 -->
+    <string name="exit_title">退出登录</string>
+    <!-- 订单列表 -->
+    <string name="order_list_view_title">订单列表</string>
+    <string name="order_toast_exception">订单详情获取失败</string>
+    <string name="order_details_title">订单详情</string>
+    <string name="order_list_order_number_text">订单编号：</string>
+    <string name="order_list_scores_title">积分</string>
+    <string name="order_list_detail_button">查看详情</string>
+    <string name="order_list_amount_title">x</string>
+    <!-- 订单列表-详细 -->
+    <string name="order_list_detail_receiver_title"> 收 货 人 ：</string>
+    <string name="order_list_detail_contact_information_title">联系方式：</string>
+    <string name="order_list_detail_ship_address_title">收货地址：</string>
+    <string name="order_list_detail_ship_status_checked">已查收</string>
+    <string name="order_list_detail_express">物流信息：</string>
+    <!-- 个人信息 -->
+    <string name="person_message">个人信息</string>
+    <string name="address_manager">地址管理</string>
+    <string name="phone_number">手机号</string>
+    <string name="determine_exit">您确定要退出本应用吗？</string>
+    <!-- 手机号 -->
+    <string name="phone_number_title">手机号</string>
+    <string name="phone_number_verification_code">验证码</string>
+    <string name="phone_number_resend_button">发送</string>
+    <string name="phone_number_bind_number_button">绑定号码</string>
+    <string name="phone_number_check_null">手机号不能为空，请重新输入！</string>
+    <string name="phone_number_num_check">验证码不能为空，请重新输入！</string>
+    <!--找回密码-->
+    <string name="find_password">找回密码</string>
+    <string name="change_true">确认修改</string>
+    <!-- 充值 -->
+    <string name="recharge_input_amount">输入充值金额:</string>
+    <string name="recharge_select_amount">选择充值金额:</string>
+    <string name="recharge_sent_gold_amount">充值对应得到的金币为：</string>
+    <string name="recharge_sent_gold_note">(注：1元 = %d金币)</string>
+    <string name="recharge_title">充值</string>
+    <string name="recharge_select_amount_50">50元</string>
+    <string name="recharge_select_amount_100">100元</string>
+    <string name="recharge_select_amount_200">200元</string>
+    <string name="recharge_select_amount_500">500元</string>
+    <string name="recharge_select_amount_2000">%s元(年费)</string>
+    <string name="recharge_confirm_msg">请输入或者选择充值金额!</string>
+    <string name="recharge_confirm">充值金额是：</string>
+
+    <!-- 充值失败 -->
+    <string name="recharge_failure_title">遗憾，充值失败！</string>
+    <string name="pay_failure_title">遗憾，支付失败！</string>
+    <string name="recharge_failure_text">请返回充值界面再次充值，如仍未充值成功，请联系我们！</string>
+    <string name="recharge_failure_phone">电话：021-88886666</string>
+    <!-- 充值成功 -->
+    <string name="recharge_success_title">恭喜，充值成功！</string>
+    <string name="pay_success_title">恭喜，支付成功！</string>
+    <string name="recharge_success_amount_title">充值金额</string>
+    <string name="recharge_success_amount">%s元</string>
+    <string name="recharge_success_text1">已为您开通企业发布任务后台</string>
+    <string name="recharge_success_text2">登陆www.canyikeji.com企业管理菜单进行相关操作</string>
+    <!-- 用户协议 -->
+    <string name="user_agreement_title">用户协议</string>
+    <string name="user_agreement_button">同&#160;&#160;意</string>
+    <!-- 鲜花商城 -->
+    <string name="flower_market_title">鲜花商城</string>
+    <string name="flower_market_flower_balance">鲜花余额：</string>
+    <string name="flower_market_newest_commodity">最新上架</string>
+    <string name="flower_market_popularity">人气</string>
+    <string name="flower_market_flowers">鲜花</string>
+    <string name="flower_market_limit">限量</string>
+    <string name="flower_market_tourist">游客</string>
+
+    <!-- 我的 -->
+    <string name="mine_title">我的</string>
+    <string name="mine_run_to_flower_market_comment_text">进入鲜花商城兑换和抽奖</string>
+    <string name="mine_flower_order_text">我的排名</string>
+    <string name="mine_info_title_text">个人信息</string>
+    <string name="mine_shared_task_text">已分享任务</string>
+    <string name="mine_publish_task_text">发布任务</string>
+    <string name="mine_staff_text">员工</string>
+    <string name="mine_my_published_task_text">已发任务</string>
+    <string name="mine_my_finances_text">我的财务</string>
+    <string name="mine_my_message_list_text">消息列表</string>
+    <string name="mine_my_order_list_text">订单列表</string>
+    <string name="mine_my_user_type_normal">个人用户</string>
+    <string name="mine_my_user_type_staff">企业绑定会员</string>
+    <string name="mine_my_user_type_manager">企业管理员</string>
+    <string name="mine_message">您还未登录，请点击登录！</string>
+
+    <!--发布任务-->
+    <string name="release_task">发布任务</string>
+    <string name="task_state_must">必做</string>
+    <string name="task_header_txt">任务 - 鲜花朵朵，收获多多</string>
+    <string name="task_examine">审核</string>
+    <!-- 购物车 -->
+    <string name="shopping_cart_title">购物车</string>
+    <string name="shopping_cart_goods_count_text">×%1$s</string>
+    <string name="shopping_cart_sum">合计：</string>
+    <string name="shopping_cart_flower">￥%1$s</string>
+    <string name="shopping_cart_balance">结 算</string>
+    <string name="shopping_car_pay">运费：</string>
+    <string name="shopping_car_money">货到付款</string>
+    <string name="shopping_car_freight">运费自理</string>
+
+    <!-- 员工画面 -->
+    <string name="staff_list_item_login_time_text">上次登陆：</string>
+    <string name="staff_list_today">当天</string>
+    <string name="staff_list_sum">共</string>
+    <!-- 首页 -->
+    <string name="index_first">首页</string>
+    <string name="loading_index_view_success">页面加载成功</string>
+    <string name="input_key_word">输入关键字</string>
+    <string name="search_button">搜索</string>
+    <string name="string_required_task_icon_text">必做</string>
+    <string name="string_not_required_task_icon_text">选做</string>
+    <string name="index_recycler_required_header">首页五条-每天必做。帮助别人，快乐自己</string>
+    <string name="index_recycler_unrequired_header">任务-鲜花多多，收获多多</string>
+    <string name="index_goods_header">鲜花商城-产品多多，选择多多</string>
+
+    <string name="index_flower_balance">鲜花：</string>
+    <string name="index_contribution">贡献元宝：</string>
+    <string name="loading_index_view_exception">发生异常，加载失败，请与管理员联系!</string>
+    <string name="loading_index_view_error">页面加载失败</string>
+    <!-- 排行榜 -->
+    <string name="ranking">排行榜</string>
+    <string name="ranking_gold">贡献元宝</string>
+    <string name="ranking_no">NO.</string>
+    <string name="ranking_spinner_total">贡献元宝总排行</string>
+    <string name="yuan">元</string>
+    <!--抽奖-->
+    <string name="luck_draw">鲜花抽奖</string>
+    <!-- 已发布任务画面 -->
+    <string name="published_tasks_title">已发任务</string>
+    <!-- 充值记录 -->
+    <string name="recharge_record_title">充值记录</string>
+    <!-- 员工画面 -->
+    <string name="staff_list_title">员工</string>
+    <string name="staff_list_remind_button_text">提醒</string>
+
+    <!--任务详情-->
+    <string name="task_details_title">任务详情</string>
+    <string name="task_toast_exception">任务详情获取失败</string>
+    <string name="task_content">任务内容</string>
+    <string name="task_minute">分</string>
+    <string name="task_share">立即分享</string>
+
+    <string name="task_share_start">开始任务</string>
+    <string name="task_share_end">您已分享过此任务！\n快乐多多，再去分享其他任务吧！</string>
+    <string name="task_end">此任务已经结束了！\n快乐多多，再去做其他任务吧！</string>
+    <!--发布任务-->
+    <string name="release_task_title">分享标题：</string>
+    <string name="hint_title">填写广告标题名,简短醒目(20字以内)</string>
+    <string name="hint_start_time">开始时间</string>
+    <string name="hint_end_time">截止时间</string>
+    <string name="release_task_time">起止时间：</string>
+    <string name="release_task_picture">分享图片：</string>
+    <string name="release_task_load">上传图片</string>
+    <string name="release_task_load_rule">(上传图片大小不超过2M，限制jpg、png、gif)</string>
+    <string name="release_task_people">面向群体：</string>
+    <string name="release_task_yes">本企业员工</string>
+    <string name="release_task_no">全员</string>
+    <string name="release_task_area">区　　域：</string>
+    <string name="hint_pro">省</string>
+    <string name="hint_x">--</string>
+    <string name="hint_c">市</string>
+    <string name="release_task_sex">用户性别：</string>
+    <string name="release_task_man">男</string>
+    <string name="release_task_woman">女</string>
+    <string name="release_task_num">投放人数：</string>
+    <string name="hint_num">填写投放人数</string>
+    <string name="release_task_share">分享内容：</string>
+    <string name="hint_share">填写分享内容</string>
+    <string name="release_task_gold_text">此任务发布共需要</string>
+    <string name="release_task_gold">元宝</string>
+    <string name="release_task_rule">
+        投放规则：\n
+        1、	投放1人分享任务消耗2个元宝\n
+        2、	员工分享本企业任务不消耗元宝\n
+        3、	广告审核时间为工作日9:00-18:00\n
+        4、	广告审核时间为48小时，请在需要投放广告之前的48小时提交申请</string>
+    <string name="release_task_pre">预览</string>
+    <string name="release_task_publish">发布</string>
+    <string name="select_start_time">选择起始时间</string>
+    <string name="select_end_time">选择结束时间</string>
+    <string name="finish">已结束</string>
+    <string name="going">正在进行</string>
+
+    <string name="pre_task_title">预览</string>
+    <!--任务-->
+    <string name="hint_input_main_text">输入关键字</string>
+    <string name="task_search">搜索</string>
+    <string name="task_necessary">必做任务 - 每天必须完成，帮助别人，快乐自己</string>
+    <string name="task_select">可选任务 - 鲜花朵朵，收获多多</string>
+
+    <string name="task_flower">&#xe617;</string>
+    <string name="hint_task_find">让你最快找到你想要的任务</string>
+    <string name="task_hall">任务大厅</string>
+
+    <!-- WXPayEntryActivity -->
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_tip">提示</string>
+    <!--分享-->
+    <string name="share_text">分享文本 http://www.baidu.com</string>
+
+    <string name="share_dialog">分享完成之后，点击【返回点灿】，才能获得鲜花哦</string>
+
+    <!--用户名指定可输入的字符-->
+    <string name="rule_name">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+
+    <!--版本更新功能-->
+    <string name="soft_update_no">已经是最新版本</string>
+    <string name="soft_update_title">软件更新</string>
+    <string name="soft_update_info">检测到新版本，立即更新吗</string>
+    <string name="soft_update_updatebtn">更新</string>
+    <string name="soft_update_later">稍后更新</string>
+    <string name="soft_updating">正在更新</string>
+    <string name="soft_update_cancel">取消</string>
+
+
+    <!--分享功能-->
+    <string name="string_share_complete">分享成功</string>
+
+    <string name="string_share_error">分享失败</string>
+
+    <string name="string_share_cancel">分享取消</string>
+</resources>

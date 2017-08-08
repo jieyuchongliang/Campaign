@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "com.fujisoft.campaign"
+        minSdkVersion 19
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "AeBGRs8MP98mawgJBkDkL",
+                GETUI_APP_KEY   : "d25m6oqWTG7q8VYHTkzwx4",
+                GETUI_APP_SECRET: "3uJSDbAG3D8IDAKQ8NbYJ2"
+        ]
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    signingConfigs {
+        debugConfig {
+            keyAlias 'diancan'
+            keyPassword '123456'
+            storeFile file('C:/Users/860617010/Desktop/diancan/diancan.jks')
+            storePassword '123456'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debugConfig
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    //    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/MobCommons-2016.1222.1756.jar')
+    compile files('libs/MobTools-2016.1222.1756.jar')
+    compile files('libs/ShareSDK-Core-2.8.0.jar')
+    compile files('libs/ShareSDK-QQ-2.8.0.jar')
+    compile files('libs/ShareSDK-QZone-2.8.0.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.8.0.jar')
+    compile files('libs/ShareSDK-Wechat-2.8.0.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.8.0.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.8.0.jar')
+    compile files('libs/gson-2.4.jar')
+    compile files('libs/httpclient-4.2.5.jar')
+    compile files('libs/httpcore-4.2.4.jar')
+    compile files('libs/AndroidViewAnimations-1.1.2.jar')
+    compile files('libs/AndroidEasingFunctions-1.0.0.jar')
+    compile files('libs/NineOldAndroid-2.4.0.jar')
+    compile files('libs/retrofit-2.0.0-beta4.jar')
+    compile files('libs/rxjava-1.1.0.jar')
+    compile files('libs/converter-gson-2.0.0-beta4.jar')
+    compile files('libs/adapter-rxjava-2.0.0-beta4.jar')
+    compile files('libs/converter-scalars-2.0.0-beta4.jar')
+    compile files('libs/logging-interceptor-3.0.1.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/butterknife-7.0.1.jar')
+    compile files('libs/alipaySdk-20161222.jar')
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.facebook.fresco:fresco:1.0.0'
+    compile 'com.facebook.fresco:imagepipeline-okhttp3:1.0.0'
+    compile 'com.github.razerdp:BasePopup:v1.6.0'
+    compile 'com.getui:sdk:2.9.5.0'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+}

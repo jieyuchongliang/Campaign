@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fujisoft.campaign.layout.EditFocusLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/task_finished_list_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.fujisoft.campaign.TaskFinishedListActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/tool_bar_back_button"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:layout_marginLeft="-6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/back"/>
+                <EditText
+                    android:id="@+id/edit_txt_search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_circle_radius_r2"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/hint_input_main_text"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingLeft="4dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tv_btn_search"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/task_search"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_task_finished_list" />
+
+</com.fujisoft.campaign.layout.EditFocusLayout>

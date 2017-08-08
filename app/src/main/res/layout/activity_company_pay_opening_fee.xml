@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:padding="@dimen/recharge_padding">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/recharge_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/register_company_success_pay_title"
+                    android:textSize="@dimen/recharge_result_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/company_pay_amount_text"
+                    android:src="@drawable/money_icon_32" />
+
+                <TextView
+                    android:id="@+id/company_pay_amount_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/register_company_success_pay_amount"
+                    android:textColor="@color/recharge_result_success_amount_color"
+                    android:textSize="@dimen/recharge_result_amount_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/recharge_padding"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/company_wechat_pay_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/recharge_padding"
+                    android:background="@color/common_color"
+                    android:text="@string/wechat"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/company_register_success_button_text_size" />
+
+                <Button
+                    android:id="@+id/company_alipay_pay_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/company_wechat_pay_button"
+                    android:layout_marginTop="@dimen/recharge_padding"
+                    android:background="@color/common_color"
+                    android:gravity="center"
+                    android:text="@string/alipay"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/company_register_success_button_text_size" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--activity_goods_detail-->
+    <declare-styleable name="AmountView">
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="btnWidth" format="dimension" />
+        <!-- 中间TextView的宽度 -->
+        <attr name="tvWidth" format="dimension" />
+        <attr name="btnTextSize" format="dimension"/>
+        <!--<attr name="tvColor" format="color"/>-->
+        <attr name="tvTextSize" format="dimension"/>
+    </declare-styleable>
+    <!--city_picker-->
+    <declare-styleable name="NumberPicker">
+        <attr name="itemNumber" format="integer"/>
+        <attr name="lineColor" format="color" />
+        <attr name="maskHight" format="dimension"/>
+        <attr name="noEmpty" format="boolean"/>
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selecredTextColor" format="color" />
+        <attr name="selecredTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="isEnable" format="boolean"/>
+    </declare-styleable>
+    <!--mine_published_task_card -->
+    <declare-styleable name="DownLoadButton">
+        <attr name="normalBackground" format="reference|color"/>
+        <attr name="downLoadedBackground" format="reference|color"/>
+        <attr name="downLoadCompleteBackground" format="reference|color"/>
+        <attr name="textColor" format="reference|color"/>
+    </declare-styleable>
+</resources>
